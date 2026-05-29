@@ -1,0 +1,6 @@
+{
+  "name": "Sehat AI",
+  "description": "Investor-ready healthcare AI landing page for Sehat AI, an AI-powered rural health companion for India, featuring an interactive diagnostic sandbox, dynamic vaccine scheduler, and market impact dashboards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
