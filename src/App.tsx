@@ -59,7 +59,6 @@ export default function App() {
             <button onClick={() => scrollToSection("interactive-demos")} className="hover:text-white transition cursor-pointer">AI Playground</button>
             <button onClick={() => scrollToSection("validation-metrics")} className="hover:text-white transition cursor-pointer">Validation</button>
             <button onClick={() => scrollToSection("market-opportunity")} className="hover:text-white transition cursor-pointer">Market scale</button>
-            <button onClick={() => scrollToSection("founder-profiles")} className="hover:text-white transition cursor-pointer">Leadership</button>
             <button onClick={() => scrollToSection("partner-milestones")} className="hover:text-white transition cursor-pointer">Partnerships</button>
           </nav>
 
@@ -410,106 +409,6 @@ export default function App() {
       {/* Market Opportunity Dashboard mounting (TAM, SAM, SOM) */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="market-opportunity">
         <MarketOpportunityChart />
-      </section>
-
-      {/* Advisory Team Boards / Founders Profile with credential links (The Leadership Grid) */}
-      <section className="py-20 bg-gray-950/40 border-y border-gray-900 select-none" id="founder-profiles">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 text-center">
-          
-          <div className="max-w-3xl mx-auto space-y-3">
-            <span className="text-[10px] font-mono font-bold tracking-widest text-[#06b6d4] uppercase">
-              The Creators
-            </span>
-            <h2 className="text-3xl md:text-4xl font-display font-medium text-white">
-              Sovereign Medical-AI Built by Experts
-            </h2>
-            <p className="text-xs sm:text-sm text-gray-400 leading-relaxed font-sans">
-              Our core engineering leadership combines deep medical AI machine learning backgrounds from AIIMS New Delhi and IT systems from Indian Institute of Technology (IIT) with rural deployment experiences.
-            </p>
-          </div>
-
-          {/* Leaders founders grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-            
-            {/* Founder 1 */}
-            <div className="bg-gray-900 border border-gray-800 p-5 rounded-2xl space-y-4 hover:border-gray-700 transition">
-              <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 to-emerald-500 flex items-center justify-center p-0.5 shadow-md">
-                <div className="w-full h-full bg-gray-950 rounded-2xl flex items-center justify-center font-display font-extrabold text-white text-lg">
-                  PP
-                </div>
-              </div>
-              <div>
-                <h4 className="text-base font-semibold text-white">Dr. Priya Patel, PhD</h4>
-                <span className="text-[10px] font-mono text-emerald-400 font-bold block mt-0.5 uppercase tracking-wide">Co-Founder • Clinical Lead</span>
-                <p className="text-xs text-gray-400 leading-normal font-sans mt-2">
-                  Completed PhD in Clinical AI Systems at AIIMS New Delhi and fellowship at Stanford Medicine. Scaled dynamic triage models during digital epidemic tracking.
-                </p>
-                <div className="flex gap-2 text-[9px] font-mono text-gray-400 mt-3 pt-3 border-t border-gray-800/60">
-                  <span>AIIMS • STANFORD</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Founder 2 */}
-            <div className="bg-gray-900 border border-gray-800 p-5 rounded-2xl space-y-4 hover:border-gray-700 transition">
-              <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 to-emerald-500 flex items-center justify-center p-0.5 shadow-md">
-                <div className="w-full h-full bg-gray-950 rounded-2xl flex items-center justify-center font-display font-extrabold text-white text-lg">
-                  SV
-                </div>
-              </div>
-              <div>
-                <h4 className="text-base font-semibold text-white">Sumeet Verma, MTech</h4>
-                <span className="text-[10px] font-mono text-cyan-400 font-bold block mt-0.5 uppercase tracking-wide">Co-Founder • Systems Lead</span>
-                <p className="text-xs text-gray-400 leading-normal font-sans mt-2">
-                  Former AI engineer at ISRO Satellite Systems. MTech in Machine Learning (IIT Madras research). Specialized in sub-2B parameter offline localized edge-AI nets.
-                </p>
-                <div className="flex gap-2 text-[9px] font-mono text-gray-400 mt-3 pt-3 border-t border-gray-800/60">
-                  <span>IIT MADRAS • ISRO</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Advisory 3 */}
-            <div className="bg-gray-900 border border-gray-800 p-5 rounded-2xl space-y-4 hover:border-gray-700 transition">
-              <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 to-emerald-500 flex items-center justify-center p-0.5 shadow-md">
-                <div className="w-full h-full bg-gray-950 rounded-2xl flex items-center justify-center font-display font-extrabold text-white text-lg">
-                  BM
-                </div>
-              </div>
-              <div>
-                <h4 className="text-base font-semibold text-white">Prof. B. Mukherjee</h4>
-                <span className="text-[10px] font-mono text-gray-400 font-bold block mt-0.5 uppercase tracking-wide">Chief Clinical Advisor</span>
-                <p className="text-xs text-gray-400 leading-normal font-sans mt-2">
-                  Former Director of ICMR (Indian Council of Medical Research). Headed landmark regional epidemiology pilots. Over 120+ clinical paper citations.
-                </p>
-                <div className="flex gap-2 text-[9px] font-mono text-gray-300 mt-3 pt-3 border-t border-gray-800/60">
-                  <span>EX-DIRECTOR, ICMR</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Advisory 4 */}
-            <div className="bg-gray-900 border border-gray-800 p-5 rounded-2xl space-y-4 hover:border-gray-700 transition">
-              <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-cyan-500 to-emerald-500 flex items-center justify-center p-0.5 shadow-md">
-                <div className="w-full h-full bg-gray-950 rounded-2xl flex items-center justify-center font-display font-extrabold text-white text-lg">
-                  RD
-                </div>
-              </div>
-              <div>
-                <h4 className="text-base font-semibold text-white">Rakeysh Dewangan</h4>
-                <span className="text-[10px] font-mono text-cyan-400 font-bold block mt-0.5 uppercase tracking-wide">Rural Health Policy Specialist</span>
-                <p className="text-xs text-gray-400 leading-normal font-sans mt-2">
-                  Advisor on WHO South Asia Health Network. Built regional care distribution maps for primary care integration for WHO delegations in Asia.
-                </p>
-                <div className="flex gap-2 text-[9px] font-mono text-gray-400 mt-3 pt-3 border-t border-gray-800/60">
-                  <span>WHO SE-ASIA POLICY ADVISOR</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
       </section>
 
       {/* Trust & Strategic Endorsements (Partner Milestones/Logos Showcase) */}

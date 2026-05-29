@@ -50,12 +50,6 @@ const opportunities: OpportunityTier[] = [
 
 export default function MarketOpportunityChart() {
   const [activeTier, setActiveTier] = useState<OpportunityTier>(opportunities[2]);
-  const [investmentAmt, setInvestmentAmt] = useState(1500000); // Default investment amount for calculator
-
-  // Simple growth projection calculations based on investor amount
-  const projectedPatientsReached = Math.round((investmentAmt / 1.5) * 4); // $1.5 scales to 4 patient life profiles
-  const co2OffSetMetric = Math.round(projectedPatientsReached * 0.28); // Rural telemedicine replaces travel CO2
-  const clinSavingsMetric = Math.round(projectedPatientsReached * 12.5); // Average $12.50 clinical diagnostic savings per rural family
 
   return (
     <div className="glass-panel rounded-3xl p-5 md:p-8 border border-white/5 space-y-6 text-left" id="market-opportunity-dashboard">
@@ -150,79 +144,6 @@ export default function MarketOpportunityChart() {
                 <p className="text-white mt-0.5 font-semibold text-[11px]">{activeTier.marketShareTarget}</p>
               </div>
             </div>
-          </div>
-
-          {/* Interactive Impact Calculator for VC Pitch Deck */}
-          <div className="bg-gradient-to-tr from-[#111c18] to-[#04111d] border border-emerald-500/20 p-5 rounded-2xl space-y-4">
-            <div className="flex items-center gap-2">
-              <Landmark className="w-5 h-5 text-emerald-400" />
-              <div>
-                <h4 className="text-xs font-mono font-bold text-emerald-300 uppercase tracking-widest">
-                  Investor Dynamic ROI Impact Calculator
-                </h4>
-                <p className="text-[10px] text-gray-400">
-                  Simulate potential clinical and social ROI based on venture-backed asset allocations.
-                </p>
-              </div>
-            </div>
-
-            {/* Slider control to input custom investment amount */}
-            <div className="space-y-2">
-              <div className="flex justify-between text-xs font-mono">
-                <span className="text-gray-300">Venture Allocation Amount:</span>
-                <span className="text-emerald-400 font-bold text-[14px]">
-                  ${(investmentAmt / 1000000).toFixed(1)}M USD
-                </span>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <input
-                  id="investment-slider-input"
-                  type="range"
-                  min={500000}
-                  max={10000000}
-                  step={500000}
-                  value={investmentAmt}
-                  onChange={(e) => setInvestmentAmt(Number(e.target.value))}
-                  className="w-full h-1.5 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-emerald-500 focus:outline-none"
-                />
-              </div>
-            </div>
-
-            {/* Simulated Live Key Health Outcomes */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-center font-mono">
-              <div className="bg-black/60 border border-gray-800 p-3 rounded-xl">
-                <span className="text-[8px] text-gray-500 block leading-tight">RURAL FAMILIES RECOVERED</span>
-                <span className="text-sm font-bold text-white block mt-1">
-                  {projectedPatientsReached.toLocaleString()} Lives
-                </span>
-                <span className="text-[7.5px] text-emerald-400 mt-0.5 block">High clinical outcomes</span>
-              </div>
-
-              <div className="bg-black/60 border border-gray-800 p-3 rounded-xl">
-                <span className="text-[8px] text-gray-500 block leading-tight">DIAGNOSTIC COST SAVED</span>
-                <span className="text-sm font-bold text-emerald-400 block mt-1">
-                  ${clinSavingsMetric.toLocaleString()} USD
-                </span>
-                <span className="text-[7.5px] text-gray-400 mt-0.5 block">Direct household saving</span>
-              </div>
-
-              <div className="bg-black/60 border border-gray-800 p-3 rounded-xl">
-                <span className="text-[8px] text-gray-500 block leading-tight">TRAVEL REDUCTION OFFSET</span>
-                <span className="text-sm font-bold text-cyan-400 block mt-1">
-                  {co2OffSetMetric.toLocaleString()} kg CO2
-                </span>
-                <span className="text-[7.5px] text-gray-400 mt-0.5 block">Zero travel telemedicine</span>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between text-[8px] text-gray-500 font-mono tracking-wide px-1">
-              <span>*Metrics assume SEHAT local distribution model via existing ASHA framework</span>
-              <span className="text-emerald-400 flex items-center gap-1">
-                <Activity className="w-3 h-3 text-emerald-400" /> Model scale factor 2.4x annually
-              </span>
-            </div>
-
           </div>
 
         </div>
